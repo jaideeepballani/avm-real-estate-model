@@ -1,4 +1,4 @@
 sb-case-study/venv/
 sb-case-study/data/
 sb-case-study/results/
-
+sb-case-study/transactions_xgboost.pkl
