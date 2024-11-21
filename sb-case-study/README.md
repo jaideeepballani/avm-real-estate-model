@@ -8,7 +8,7 @@ This repository contains the implementation of an Automated Valuation Model (AVM
 1. Clone the Repository:
    - Clone this repository to your local system using:
      ```bash
-     git clone [text](https://github.com/jaideeepballani/avm-real-estate-model.git)
+     git clone https://github.com/jaideeepballani/avm-real-estate-model.git
      cd <repository-directory>
      ```
 
