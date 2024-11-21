@@ -8,7 +8,7 @@ This repository contains the implementation of an Automated Valuation Model (AVM
 1. Clone the Repository:
    - Clone this repository to your local system using:
      ```bash
-     git clone <repository-url>
+     git clone [text](https://github.com/jaideeepballani/avm-real-estate-model.git)
      cd <repository-directory>
      ```
 
@@ -74,7 +74,7 @@ The AVM model currently runs on two datasets:
    - Includes property sales transaction details.
    - Target Variable: `amount`.
 
-This can be changed using `config.py` file which contains the paths, configurations 
+This can be changed using `config.py` file which contains the paths, configurations, model parameter grids etc.
 
 
 
@@ -85,7 +85,7 @@ This can be changed using `config.py` file which contains the paths, configurati
 ### Feature Selection
 - The script feature selection currently runs correlation analysis 
 - Other suggested methods like Recursive Feature Elimination, Univariate Feature Selection
-- Feature Importance was used in separate Jupyter Notebook for base model training
+- Feature Importance was used in separate Jupyter Notebook for base model training. You can navigate to the Jupyter Notebook through the `notebooks` folder in the repo.
 
 ### Expected Columns
 - `rentals_df`: Columns such as `property_size_sqm`, `location`, `contract_start_date`, `contract_end_date`, etc.
@@ -103,14 +103,14 @@ This can be changed using `config.py` file which contains the paths, configurati
      ```bash
      python base_models.py
      ```
-   - This script trains models (Random Forest and XGBoost) for both datasets using GridSearchCV and saves the best models.
+   - This script trains models (Random Forest and XGBoost) for both datasets using GridSearchCV and saves the best models. Currently, SVR is not being used but the code is available and commented out.
 
 3. Meta Learner
    - This AVM utilises a Meta Learner to combine the predictions of our base models(Random Forest, XGBoost, SVR etc)
    to improve the performance.
 
 3. Evaluate Models:
-   - Evaluation metrics include RMSE, MAE, R², and confusion matrix.
+   - Evaluation metrics include RMSE, MAE, R². These are being calculated in `evaluation.py`
    - Feature importance plots and ALE plots are generated for interpretability in separate Jupyter notebooks.
 
 4. Saved Models:
@@ -160,6 +160,12 @@ This can be changed using `config.py` file which contains the paths, configurati
 ---
 
 ## Additional Notes
+
+### Testing
+- Unit tests are defined in `test.py`. They can be used to stress test each functionality of the pipeline
+
+### Containerization
+- Docker image file is provided - `dockerfile.yaml`. This can be used to containerize the application.
 
 ### Features
 - For rentals, a derived feature `contract_length` is computed as:
