@@ -162,7 +162,7 @@ This can be changed using `config.py` file which contains the paths, configurati
 ## Additional Notes
 
 ### Testing
-- Unit tests are defined in `test.py`. They can be used to stress test each functionality of the pipeline
+- Unit tests are defined in `test.py`. They can be used to stress test each functionality of the pipeline.
 
 ### Containerization
 - Docker image file is provided - `dockerfile.yaml`. This can be used to containerize the application.
@@ -180,5 +180,8 @@ This can be changed using `config.py` file which contains the paths, configurati
 - Incorporate ensemble meta-learners and advanced feature engineering for improved accuracy.
 - Serve predictions using an API
 - Web interface to interact with AVM and generate predictions
+
+### References
+- Accumulated Local Effects(ALE) Plots were used to demonstrate and explain how the features influenced the predictions of our base models. To know more about it, please refer to this link: https://christophm.github.io/interpretable-ml-book/ale.html
 
 ---
